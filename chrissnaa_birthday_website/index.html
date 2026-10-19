@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffb6a6">
+  <title>Happy 21st Birthday, Chrissnaa! 🎂</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Baloo+2:wght@500;600;700;800&display=swap');
+    :root { --peach:#ffb8a7; --coral:#ff806f; --cream:#fff8e9; --pink:#ffd9df; --plum:#542d4b; --gold:#ffd66b; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; min-height:100vh; overflow-x:hidden; color:var(--plum);
+      font-family:'DM Sans',sans-serif;
+      background: radial-gradient(ellipse at 18% 8%, #fff0d4 0, transparent 34%),
+                  radial-gradient(ellipse at 85% 25%, #ffc8cf 0, transparent 35%),
+                  linear-gradient(145deg,#ffb9a8,#ffe0ce 48%,#ffd0d8);
+    }
+    .bunting { position:absolute; top:0; left:0; width:100%; display:flex; justify-content:space-around; pointer-events:none; z-index:1; }
+    .bunting span { width:0;height:0;border-left:clamp(12px,2vw,22px) solid transparent;border-right:clamp(12px,2vw,22px) solid transparent;border-top:clamp(28px,4vw,44px) solid var(--coral); filter:drop-shadow(0 4px 2px #8e405020); }
+    .bunting span:nth-child(3n) { border-top-color:#fff2d2; }
+    .bunting span:nth-child(3n + 1) { border-top-color:#d78eb0; }
+    .wrap { width:min(100% - 28px, 960px); margin:auto; padding:72px 0 48px; position:relative; z-index:2; }
+    .hero { text-align:center; padding:25px 18px 18px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border:1px solid #ffffffa8; background:#fff8e9a8; border-radius:999px; font-size:.8rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; box-shadow:0 8px 24px #88435a10; }
+    h1 { font-family:'Baloo 2',sans-serif; font-size:clamp(2.6rem,8vw,5.8rem); line-height:.98; margin:24px 0 8px; letter-spacing:-.045em; color:#743653; text-shadow:0 3px 0 #fff5df; }
+    h1 .name { display:block; font-family:'Pacifico',cursive; font-size:clamp(3.1rem,10vw,7rem); color:#f46f72; font-weight:400; letter-spacing:0; text-shadow:2px 3px 0 #fff4dc, 0 10px 24px #a73e5820; }
+    .subtitle { font-size:clamp(1rem,2.8vw,1.2rem); line-height:1.7; max-width:580px; margin:15px auto 24px; color:#74495c; }
+    .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
+    button { border:0; border-radius:999px; padding:13px 20px; font:700 1rem 'DM Sans',sans-serif; cursor:pointer; transition:transform .2s,box-shadow .2s; }
+    button:hover { transform:translateY(-3px); box-shadow:0 10px 20px #8c3b5324; }
+    button:active { transform:scale(.98); }
+    .primary { color:#fff; background:linear-gradient(135deg,#f36c79,#db4e7a); box-shadow:0 7px 0 #b84167; }
+    .secondary { color:#733d56; background:#fff8e9; border:1px solid #ffffff; box-shadow:0 5px 0 #e8a7a8; }
+    .card { margin:24px auto 0; padding:clamp(16px,4vw,30px); border-radius:30px; background:#fff9edc9; border:1px solid #ffffffc9; box-shadow:0 22px 60px #91485a1a; backdrop-filter:blur(10px); }
+    .memory { display:grid; grid-template-columns:minmax(0, .9fr) minmax(0,1.1fr); gap:clamp(18px,4vw,38px); align-items:center; }
+    .photo-frame { position:relative; max-width:420px; width:100%; margin:auto; padding:10px; background:#fffdf6; border-radius:22px; transform:rotate(-2deg); box-shadow:0 14px 30px #6c33421c; }
+    .photo-frame::before { content:'♡'; position:absolute; top:-20px; right:-12px; z-index:2; display:grid; place-items:center; width:52px;height:52px;border-radius:50%;background:#ffdf83;color:#b64b69;font-size:30px; transform:rotate(12deg); box-shadow:0 5px 10px #7a3b441c; }
+    .photo-frame img { display:block; width:100%; height:auto; aspect-ratio:auto; object-fit:contain; object-position:center; border-radius:15px; }
+    .message h2 { font:400 clamp(1.8rem,5vw,3rem) 'Pacifico',cursive; color:#ed6d78; margin:0 0 14px; }
+    .message p { font-size:1rem; line-height:1.85; color:#71485b; margin:0 0 12px; }
+    .signature { font-family:'Pacifico',cursive; color:#d85879; font-size:1.3rem; margin-top:20px!important; }
+    .wishes { text-align:center; padding:28px 16px; }
+    .wishes h2 { font:400 clamp(1.8rem,5vw,2.7rem) 'Pacifico',cursive; color:#ed6d78; margin:0 0 12px; }
+    .wish-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px; }
+    .wish { padding:18px 12px; border-radius:18px; background:#fff4df; border:1px solid #fff; }
+    .wish .emoji { font-size:2rem; display:block; margin-bottom:7px; }
+    .wish strong { display:block; margin-bottom:5px; }
+    .wish small { color:#85596b; line-height:1.5; }
+    footer { text-align:center; padding:28px 10px 0; color:#8c5268; font-size:.88rem; }
+    .cake { font-size:clamp(2.5rem,7vw,4rem); display:inline-block; animation:bob 2.5s ease-in-out infinite; filter:drop-shadow(0 6px 5px #b45c4922); }
+    .sparkle { position:fixed; pointer-events:none; z-index:0; opacity:.7; animation:float 7s ease-in-out infinite; }
+    .sparkle:nth-child(2n) { animation-delay:-3s; }
+    .hidden-message { display:none; margin:18px auto 0; max-width:650px; padding:16px 20px; border-radius:18px; background:#fff8e9d9; line-height:1.7; animation:pop .45s ease both; }
+    .hidden-message.show { display:block; }
+    .confetti { position:fixed; top:-14px; z-index:20; width:9px;height:14px; pointer-events:none; animation:fall linear forwards; border-radius:2px; }
+    @keyframes bob { 0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-9px) rotate(4deg)} }
+    @keyframes float { 0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(12deg)} }
+    @keyframes pop { from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)} }
+    @keyframes fall { to { transform:translate3d(var(--drift),110vh,0) rotate(720deg); opacity:.85; } }
+    @media (max-width:650px) {
+      .wrap { width:min(100% - 20px,560px); padding-top:58px; }
+      .hero { padding-inline:6px; }
+      .memory { grid-template-columns:1fr; }
+      .photo-frame { max-width:min(100%,420px); }
+      .message { text-align:center; padding:5px 2px 0; }
+      .wish-grid { grid-template-columns:1fr; }
+      .wish { display:flex; align-items:center; gap:14px; text-align:left; padding:14px 16px; }
+      .wish .emoji { margin:0; min-width:42px; }
+      .card { border-radius:24px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
+  </style>
+</head>
+<body>
+  <div class="bunting" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <span class="sparkle" style="top:18%;left:7%;font-size:24px">✦</span>
+  <span class="sparkle" style="top:35%;right:7%;font-size:30px">✧</span>
+  <span class="sparkle" style="top:72%;left:5%;font-size:20px">♡</span>
+  <span class="sparkle" style="top:82%;right:9%;font-size:24px">✦</span>
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow">🎀 A little birthday surprise 🎀</div>
+      <div style="margin-top:24px" class="cake" aria-hidden="true">🎂</div>
+      <h1>Happy 21st Birthday,<span class="name">Chrissnaa!</span></h1>
+      <p class="subtitle">Twenty-one looks like a beautiful new chapter. Today is all about celebrating you, your smile, and all the wonderful things waiting for you. 💗</p>
+      <div class="actions">
+        <button class="primary" id="surpriseBtn">✨ Open your surprise</button>
+        <button class="secondary" id="musicBtn" aria-pressed="false">♫ Play birthday tune</button>
+      </div>
+      <div class="hidden-message" id="surpriseMessage">🎉 Surprise, Chrissnaa! I hope your 21st year brings you more happiness than you can count, people who love you well, little adventures, big wins, and memories that make you smile for years. You deserve so much good. 💖</div>
+    </header>
+
+    <section class="card memory" aria-label="Birthday message">
+      <div class="photo-frame"><img src="assets/chrissnaa.jpg" alt="Chrissnaa smiling" /></div>
+      <div class="message">
+        <h2>To the birthday girl…</h2>
+        <p>Happy birthday to someone who deserves the sweetest day and the brightest year ahead. May your days be filled with genuine laughter, peaceful moments, exciting opportunities, and the kind of love that makes you feel appreciated.</p>
+        <p>Keep being your lovely self, keep dreaming big, and never forget how special you are. Here’s to 21 — may it be soft when life is hard, exciting when you need a little adventure, and beautiful in ways you never expected. 🦋</p>
+        <p class="signature">With lots of love, always ♡</p>
+      </div>
+    </section>
+
+    <section class="card wishes">
+      <h2>My wishes for your 21st ✨</h2>
+      <p>May this new chapter bring you all the little things that make life magical.</p>
+      <div class="wish-grid">
+        <div class="wish"><span class="emoji">🌷</span><div><strong>More happiness</strong><small>Everyday reasons to smile and feel loved.</small></div></div>
+        <div class="wish"><span class="emoji">🌟</span><div><strong>Beautiful dreams</strong><small>Courage to chase them and joy when they come true.</small></div></div>
+        <div class="wish"><span class="emoji">🥂</span><div><strong>Unforgettable memories</strong><small>New adventures, silly laughs, and stories to keep.</small></div></div>
+      </div>
+    </section>
+    <footer>Made with 💗 just for Chrissnaa · 21 looks wonderful on you!</footer>
+  </main>
+
+  <script>
+    const surpriseBtn = document.getElementById('surpriseBtn');
+    const surpriseMessage = document.getElementById('surpriseMessage');
+    const musicBtn = document.getElementById('musicBtn');
+    let audioCtx = null, musicTimers = [], playing = false;
+
+    function confettiBurst(amount = 100) {
+      const colors = ['#f46f72','#ffd66b','#d78eb0','#fff2d2','#9dc9bb','#f7a7c5'];
+      for (let i = 0; i < amount; i++) {
+        const bit = document.createElement('i');
+        bit.className = 'confetti';
+        bit.style.left = Math.random() * 100 + 'vw';
+        bit.style.background = colors[Math.floor(Math.random() * colors.length)];
+        bit.style.setProperty('--drift', (Math.random() * 220 - 110) + 'px');
+        bit.style.animationDuration = (3 + Math.random() * 3.5) + 's';
+        bit.style.animationDelay = (Math.random() * .7) + 's';
+        bit.style.width = (5 + Math.random() * 7) + 'px';
+        bit.style.height = (8 + Math.random() * 10) + 'px';
+        document.body.appendChild(bit);
+        setTimeout(() => bit.remove(), 7500);
+      }
+    }
+    surpriseBtn.addEventListener('click', () => {
+      surpriseMessage.classList.toggle('show');
+      surpriseBtn.textContent = surpriseMessage.classList.contains('show') ? '💖 Surprise opened!' : '✨ Open your surprise';
+      confettiBurst(120);
+    });
+
+    // Plays a simple, synthesized version of the Happy Birthday melody.
+    // Browsers require a tap before audio can start.
+    function playHappyBirthday() {
+      const notes = [
+        [392,.32],[392,.18],[440,.5],[392,.5],[523,.5],[494,.9],
+        [392,.32],[392,.18],[440,.5],[392,.5],[587,.5],[523,.9],
+        [392,.32],[392,.18],[784,.5],[659,.5],[523,.5],[494,.5],[440,.9],
+        [698,.32],[698,.18],[659,.5],[523,.5],[587,.5],[523,1.0]
+      ];
+      const start = audioCtx.currentTime + .08;
+      let cursor = 0;
+      notes.forEach(([freq,duration], index) => {
+        const when = start + cursor;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.0001, when);
+        gain.gain.exponentialRampToValueAtTime(0.16, when + .025);
+        gain.gain.setTargetAtTime(0.0001, when + Math.max(.05,duration - .05), .035);
+        osc.connect(gain); gain.connect(audioCtx.destination);
+        osc.start(when); osc.stop(when + duration + .08);
+        cursor += duration + .07;
+      });
+      return cursor;
+    }
+    musicBtn.addEventListener('click', async () => {
+      if (playing) {
+        musicTimers.forEach(clearTimeout); musicTimers = [];
+        if (audioCtx && audioCtx.state !== 'closed') await audioCtx.close();
+        audioCtx = null; playing = false;
+        musicBtn.textContent = '♫ Play birthday tune';
+        musicBtn.setAttribute('aria-pressed','false');
+        return;
+      }
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) { musicBtn.textContent = 'Audio not supported'; return; }
+      audioCtx = new AudioContextClass();
+      if (audioCtx.state === 'suspended') await audioCtx.resume();
+      playing = true;
+      musicBtn.textContent = '♫ Stop birthday tune';
+      musicBtn.setAttribute('aria-pressed','true');
+      const duration = playHappyBirthday();
+      musicTimers.push(setTimeout(async () => {
+        if (audioCtx && audioCtx.state !== 'closed') await audioCtx.close();
+        audioCtx = null; playing = false;
+        musicBtn.textContent = '♫ Play birthday tune';
+        musicBtn.setAttribute('aria-pressed','false');
+      }, duration * 1000 + 250));
+      confettiBurst(35);
+    });
+    // Try to start the birthday tune automatically as soon as the page opens.
+    // Mobile browsers may block audible autoplay until the visitor interacts with the page.
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        confettiBurst(45);
+        musicBtn.click();
+      }, 650);
+    });
+  </script>
+</body>
+</html>
